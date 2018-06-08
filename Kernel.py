@@ -2,7 +2,7 @@
 """该文件包含了到aiml模块的公共接口。"""
 
 from __future__ import print_function
-
+from LangSupport import splitChinese
 import copy
 import glob
 import os
@@ -776,6 +776,7 @@ class Kernel:
         newInput = ""
         for e in elem[2:]:
             newInput += self._processElement(e, sessionID)
+        newInput = u' '.join(splitChinese(newInput))
         return self._respond(newInput, sessionID)
 
     # <star>
