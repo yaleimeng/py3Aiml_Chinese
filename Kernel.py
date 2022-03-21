@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """该文件包含了到aiml模块的公共接口。"""
+# 对于python3.8或更高版本，请将time.clock()替换为time.time()
 
 from __future__ import print_function
 from LangSupport import splitChinese
